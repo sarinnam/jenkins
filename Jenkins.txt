@@ -1,0 +1,35 @@
+Jenkins
+
+Integration continue:
+compilation/test/package en zip/ deploiement
+automatisation quotidienne
+
+architecture ntier ne conviens pas pour Integration Continue 
+
+moteur de recherche, categories, moteur de recommandation, filtres (constructeur, prix etc...) =>micro services   independantes 
+=> chaque composants dans docker et orchestrer par kubernetes (relance appli en cas de defaillances dans autre conteneurs).
+
+test unitaire = 1 seul composant
+test d integration : test entre plusieurs composants (selenium)
+test de charge => jmeter
+
+artefact => l application package
+
+Installation
+-installation tomcat8
+Pre-requis:
+JAVA_HOME
+java installé
+
+-repertoires
+webapps=> stockes les applications
+installation jenkins à partir d un war
+copier le war dans /webapps de tomcat8
+
+http://localhost:8080/jenkins
+changer de mot de passe admin
+creation et lancement de jobs
+creation inspection et deploiement continue
+livraison continue : besoin d une action manuelle pour le deploiement
+deploiement continue idem mais sans action humaine
+
